@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { SearchComponent } from './component/header/search/search.component';
-import { FormsModule} from '@angular/forms'
+import { FormsModule} from '@angular/forms';
+import { ProductlistComponent } from './component/productlist/productlist.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
     SearchComponent,
+    ProductlistComponent,
     
   ],
   imports: [

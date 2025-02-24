@@ -1,15 +1,22 @@
+<!-- ngmodel -->
 <div class="w-full flex flex-col items-center py-8">
-    <div class="border-black border-4 rounded-md flex">
-      <input
-        class="bg-gray-200 py-2 pl-4 w-96"
-        type="text"
-        placeholder="Search"
-        [(ngModel)]="searchValue"
-      />
-      <button class="text-white bg-slate-900 px-4 py-2">Search</button>
-    </div>
-    
-    <h2 class="mt-4">{{ searchValue }}</h2>
+  <div class="border-black border-4 rounded-md flex">
+    <input
+      class="bg-gray-200 py-2 pl-4 w-96"
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchValue"
+    />
+    <button class="text-white bg-slate-900 px-4 py-2">Search</button>
   </div>
-  
-  
+
+  <h2 class="mt-4">{{ searchValue }}</h2>
+</div>
+
+<!-- ngFor -->
+
+<div class="pl-20">
+  <ul>
+    <li *ngFor="let user of users">{{user.name}} user's age is {{user.age}}</li>
+  </ul>
+</div>

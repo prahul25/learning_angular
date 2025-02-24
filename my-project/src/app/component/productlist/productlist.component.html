@@ -1,0 +1,39 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-20">
+    <div *ngFor="let product of products" class="border rounded-lg shadow-md p-4 bg-white">
+      <!-- Wishlist & Sale Badge -->
+      <div class="flex justify-between items-center mb-2">
+        <div class="cursor-pointer text-gray-500 hover:text-red-500">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+        <div class="bg-red-500 text-white text-sm px-2 py-1 rounded-md">
+          -{{product.discountPrice}}%
+        </div>
+      </div>
+  
+      <!-- Product Image -->
+      <div class="flex justify-center">
+        <img [src]="product.imageURL" [alt]="product.name" class="h-40 w-full object-contain" />
+      </div>
+  
+      <!-- Price -->
+      <div class="text-lg font-semibold text-gray-800 mt-2">
+        ₹{{product.price}}
+      </div>
+  
+      <!-- Product Name -->
+      <div class="text-sm font-medium text-gray-700">
+        {{product.name}}
+      </div>
+  
+      <!-- Product Category & Brand -->
+      <div class="text-xs text-gray-500">
+        {{product.gender}} • {{product.category}} • {{product.brand}}
+      </div>
+  
+      <!-- Available Colors & Bestseller -->
+      <div class="text-xs text-gray-600 font-medium mt-1">
+        {{product.color.length}} Colors • Best Seller
+      </div>
+    </div>
+  </div>
+  
