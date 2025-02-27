@@ -10,7 +10,8 @@
     <button class="text-white bg-slate-900 px-4 py-2">Search</button>
   </div>
 
-  <h2 class="mt-4">{{ searchValue }}</h2>
+  <div><p class="mt-4 absolute" *ngIf="searchValue  != ''"><strong>Search results for : </strong>{{ searchValue }}</p></div>
+  
 </div>
 
 <!-- ngFor -->

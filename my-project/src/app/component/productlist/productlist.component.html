@@ -5,8 +5,8 @@
         <div class="cursor-pointer text-gray-500 hover:text-red-500">
           <i class="fa fa-heart-o" aria-hidden="true"></i>
         </div>
-        <div class="bg-red-500 text-white text-sm px-2 py-1 rounded-md">
-          -{{product.discountPrice}}%
+        <div *ngIf="product.discountPrice"  class="bg-red-500 text-white text-sm px-2 py-1 rounded-md">
+          {{(100 - (product.discountPrice / product.price) * 100).toFixed(0)}}%
         </div>
       </div>
   
@@ -33,6 +33,9 @@
       <!-- Available Colors & Bestseller -->
       <div class="text-xs text-gray-600 font-medium mt-1">
         {{product.color.length}} Colors • Best Seller
+      </div>
+      <div class="" [ngStyle]="{color:product.is_in_inventory ? 'green' : 'red'}">
+        {{product.is_in_inventory ? 'In Stock' : 'Out of Stock'}}
       </div>
     </div>
   </div>
